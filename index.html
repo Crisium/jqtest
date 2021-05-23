@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+		
+	<title>Spike Test Load Save of Layout</title>
+	
+	<link rel="stylesheet" href="css/app.css" type="text/css" />
+
+	<link rel="stylesheet" href="node_modules/jqwidgets-scripts/jqwidgets/styles/jqx.base.css" type="text/css" />
+
+	<base href="./">
+ 
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<script> var exports = {}; </script>
+
+	<script type="text/javascript" src="node_modules/jqwidgets-scripts/jqwidgets/jqxcore.js"></script>
+
+	<script type="text/javascript" src="node_modules/jqwidgets-scripts/jqwidgets/jqxbuttons.js"></script>
+
+	<script type="text/javascript" src="node_modules/jqwidgets-scripts/jqwidgets/jqxscrollbar.js"></script>
+	<script type="text/javascript" src="node_modules/jqwidgets-scripts/jqwidgets/jqxlistbox.js"></script>
+
+	<script type="text/javascript" src="node_modules/jqwidgets-scripts/jqwidgets/jqxribbon.js"></script>
+	<script type="text/javascript" src="node_modules/jqwidgets-scripts/jqwidgets/jqxwindow.js"></script>
+	<script type="text/javascript" src="node_modules/jqwidgets-scripts/jqwidgets/jqxlayout.js"></script>
+	<script type="text/javascript" src="node_modules/jqwidgets-scripts/jqwidgets/jqxdockinglayout.js"></script>
+
+	<script type="text/javascript" src="node_modules/jqwidgets-scripts/jqwidgets/jqxmenu.js"></script>
+
+	<script type="module" src="dist/app.js"></script>
+
+	<script>
+		$("body").empty().append("hello fucking jquery");
+	</script>
+</head>
+<body style="background: white;">
+
+	<div id="jqxDockingLayout">
+
+		<div data-container="PanelProperties">
+			<div class="panel">
+				<div id="properties"></div>
+			</div>
+		</div>
+		<div data-container="OutputPanel">
+			Output
+		</div>
+
+		<div data-container="PanelSetup">
+		</div>
+
+		<div data-container="PanelBots">
+			<div class="panel">
+				<div id="bots"></div>
+			</div>
+		</div>
+
+		<div data-container="PanelOverview">
+			<div class="panel">
+				<input id="save" type="button" value="Save"/>
+				<input id="load" type="button" value="Load"/>
+				<input id="create" type="button" value="Create Floating Panel"/>
+				<div id="overview-server-test"></div>
+			</div>
+		</div>
+
+		<div data-container="PanelRates">
+			<div class="panel">
+				<div class="rates">Hello World</div>
+			</div>
+		</div>
+
+		<div data-container="PanelCurrencies">
+			<div class="panel">
+				<div id="currencies-test"></div>
+			</div>
+		</div>
+
+		<div data-container="PanelAnimations">
+		</div>
+
+		<div data-container="PanelServer">
+			<div class="panel">
+				<div id="server-properties"></div>
+			</div>
+		</div>
+
+		<div data-container="PanelExchanges">
+			<div class="panel">
+				<div id="exchanges-properties"></div>
+			</div>
+		</div>
+
+		<div data-container="PanelAbout">
+		</div>
+	</div>
+
+</body>
+</html>
