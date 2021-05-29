@@ -15,7 +15,7 @@
 	},
 	"include": [
 		"./src",
-		"./node_modules/jqwidgets-scripts/jqwidgets-ts/jqwidgets.d.ts"
+		//"./node_modules/jqwidgets-scripts/jqwidgets-ts/jqwidgets.d.ts"
 	],
 	"exclude": [
 		
