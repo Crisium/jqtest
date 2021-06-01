@@ -1,7 +1,4 @@
-﻿// WRONG: do not use reference to ../../../jqwidgets-ts/jqwidgets.d.ts"
-/// <reference path="../node_modules/jqwidgets-scripts/jqwidgets-ts/jqwidgets.d.ts" />;
-
-$(document).ready(() => {
+﻿$(document).ready(() => {
 
 	let layout_middle_horizontal = [{
 		type: 'layoutGroup',
@@ -104,14 +101,10 @@ $(document).ready(() => {
 		]
 	}];
 
-	let docking_layout: jqwidgets.jqxDockingLayout = jqwidgets.createInstance('#jqxDockingLayout', 'jqxDockingLayout', { width: "100%", height: "100%", layout: layout });
+	let docking_layout = jqwidgets.createInstance('#jqxDockingLayout', 'jqxDockingLayout', { width: "100%", height: "100%", layout: layout });
 
 	$("#save").on( "click", ()=>{
-
-		// WRONG: I am forced to type cast to <any> because saveLayout does not exist on docking_layout.saveLayout <------(this can not compile)
-		//let data = (<any>$('#jqxDockingLayout')).jqxDockingLayout('saveLayout');
-
-		let data = docking_layout.saveLayout();
+		let data = (<any>$('#jqxDockingLayout')).jqxDockingLayout('saveLayout');
 
 		let test = JSON.stringify(data, null, 2);
 		localStorage.setItem("test", test);
@@ -119,16 +112,11 @@ $(document).ready(() => {
 
 	$("#load").on( "click", ()=>{
 		let test = localStorage.getItem("test");
-
-		// WRONG: I am forced to type cast to <any> because loadLayout does not exist on docking_layout.loadLayout <------(this can not compile)
-		//(<any>$('#jqxDockingLayout')).jqxDockingLayout('loadLayout', JSON.parse(test));
-
-		docking_layout.loadLayout(JSON.parse(test));
+		(<any>$('#jqxDockingLayout')).jqxDockingLayout('loadLayout', JSON.parse(test));
 	});
 	
 	$("#create").on( "click", ()=>{
-		// WRONG: this part is weird because I can access the addFloatGroup on the docking_layout, but cannot access saveLayout or loadLayout
-		docking_layout.addFloatGroup( 300, 200, {x:100, y:100}, 'layoutPanel', 'Rates', ``, "initContent");
+		docking_layout.addFloatGroup( 300, 200, {x:100, y:100}, 'layoutPanel', 'Rates', ``, "");
 	});
 
 });

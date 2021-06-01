@@ -10,7 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "@types/jquery": "^3.5.5",
-    "jquery": "^3.6.0"
+    "jquery": "^3.6.0",
+    "jqwidgets-framework": "^12.0.4"
   },
   "dependencies": {
     "jqwidgets-scripts": "^12.0.2"
